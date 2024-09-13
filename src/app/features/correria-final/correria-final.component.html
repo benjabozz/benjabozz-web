@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h1 class="mb-5">
+    <span class="mdi mdi-run-fast me-2"></span>
+    <span>Correria Final</span>
+  </h1>
+
+  <ng-container *ngFor="let materia of listaDeMaterias">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex flex-column mb-2">
+        <span class="fw-bold fs-4">{{ materia.title }}</span>
+        <span class="small">Professor(a): {{ materia.prof }}</span>
+      </div>
+      <span class="fs-1 fw-bold text-warning">{{ materia.needed }}</span>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-borderless">
+        <thead>
+          <tr>
+            <th scope="col" class="bg-primary">Tipo/Nome</th>
+            <th scope="col" class="bg-primary text-center">Data</th>
+            <th scope="col" class="bg-primary text-center">Qnto. Vale</th>
+            <th scope="col" class="bg-primary text-center">Minha Nota</th>
+            <th scope="col" class="bg-primary text-end">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let atividade of materia.atividades">
+            <td>{{ atividade.name }}</td>
+            <td class="text-center">{{ atividade.date }}</td>
+            <td class="text-center">{{ atividade.value }}</td>
+            <td class="text-center">{{ atividade.score }}</td>
+            <td class="text-end">
+              <span
+                *ngIf="atividade.status"
+                class="mdi text-success mdi-check-decagram"
+              ></span>
+              <span
+                *ngIf="!atividade.status"
+                class="mdi text-success mdi-decagram-outline"
+              ></span>
+            </td>
+          </tr>
+          <tr class="fw-bold">
+            <td>TOTAL</td>
+            <td class="text-center"></td>
+            <td class="text-center">10,0</td>
+            <td class="text-center">0</td>
+            <td class="text-center"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+</div>

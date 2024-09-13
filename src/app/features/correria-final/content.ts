@@ -1,0 +1,93 @@
+export const materias = [
+  {
+    title: 'Ciencias',
+    prof: 'Andressa',
+    needed: 8.45,
+    atividades: [
+      {
+        name: 'Prova 1',
+        date: '',
+        value: 3.0,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Prova 2',
+        date: '',
+        value: 4.0,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Trabalho 1',
+        date: '',
+        value: 1.0,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Trabalho 2',
+        date: '',
+        value: 1.0,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Trabalho 3',
+        date: '',
+        value: 1.0,
+        score: 0,
+        status: false,
+      },
+    ],
+  },
+  {
+    title: 'Portugues',
+    prof: 'Karina',
+    needed: 8.05,
+    atividades: [
+      {
+        name: 'Prova 1',
+        date: '',
+        value: 2.5,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Prova 2',
+        date: '',
+        value: 3.0,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Trabalho 1',
+        date: '',
+        value: 1.5,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Trabalho 2',
+        date: '',
+        value: 1.0,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Trabalho 3',
+        date: '',
+        value: 1.0,
+        score: 0,
+        status: false,
+      },
+      {
+        name: 'Trabalho 3',
+        date: '',
+        value: 0.5,
+        score: 0,
+        status: false,
+      },
+    ],
+  },
+];
