@@ -18,6 +18,7 @@
           <tr>
             <th scope="col" class="bg-primary">Tipo/Nome</th>
             <th scope="col" class="bg-primary text-center">Data</th>
+            <th scope="col" class="bg-primary">Descrição</th>
             <th scope="col" class="bg-primary text-center">Qnto. Vale</th>
             <th scope="col" class="bg-primary text-center">Minha Nota</th>
             <th scope="col" class="bg-primary text-end">Status</th>
@@ -27,12 +28,21 @@
           <tr *ngFor="let atividade of materia.atividades">
             <td>{{ atividade.name }}</td>
             <td class="text-center">{{ atividade.date }}</td>
+            <td>
+              <div
+                class="text-truncate"
+                style="width: 200px"
+                [title]="atividade.description"
+              >
+                {{ atividade.description }}
+              </div>
+            </td>
             <td class="text-center">{{ atividade.value }}</td>
             <td class="text-center">{{ atividade.score }}</td>
             <td class="text-end">
               <span
                 *ngIf="atividade.status"
-                class="mdi text-success mdi-check-decagram"
+                class="mdi text-warning mdi-check-decagram"
               ></span>
               <span
                 *ngIf="!atividade.status"
@@ -43,6 +53,7 @@
           <tr class="fw-bold">
             <td>TOTAL</td>
             <td class="text-center"></td>
+            <td></td>
             <td class="text-center">10,0</td>
             <td class="text-center">0</td>
             <td class="text-center"></td>
